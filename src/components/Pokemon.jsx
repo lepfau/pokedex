@@ -10,10 +10,10 @@ componentDidMount() {
     axios
       .get(this.props.url)
       .then((responseFromApi) => {
-        console.log(`responseFromApi.data.sprites.version.generation-v.black-white.animated.back_default`);
+        // console.log(responseFromApi.data.sprites.version['generation-v']['black-white'].animated.back_default);
         this.setState({
           
-          sprites: responseFromApi.data.sprites.front_default
+          sprites: responseFromApi.data.sprites.versions["generation-v"]['black-white'].animated.front_default
         });
       });
   }
@@ -21,9 +21,9 @@ componentDidMount() {
 
     render() {
         return (
-            <div>
-                <p>{this.props.name}</p>
-                <img src={this.state.sprites}/>
+            <div className="pokemonCard">
+                <p>{this.props.name.toUpperCase()}</p>
+                <img className="pokemonimg" alt="pokemonimg" src={this.state.sprites}/>
             </div>
         )
     }

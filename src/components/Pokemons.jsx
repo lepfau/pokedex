@@ -9,7 +9,7 @@ export class Pokemons extends Component {
 
     componentDidMount() {
         axios
-          .get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+          .get('https://pokeapi.co/api/v2/pokemon?limit=500&offset=0')
           .then((responseFromApi) => {
             console.log(responseFromApi.data);
             this.setState({
@@ -24,7 +24,9 @@ export class Pokemons extends Component {
             <div className="pokemons">
              {this.state.pokemons.map((pokemon => {
                  return (
+                     <div key={pokemon.name}>
                  <Pokemon name={pokemon.name} url={pokemon.url}/>
+                 </div>
              )}))}
             </div>
         )

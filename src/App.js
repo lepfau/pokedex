@@ -4,7 +4,7 @@ import Pokemons from "./components/Pokemons"
 function App() {
   return (
     <div className="App">
-      <h1>POKEDEX</h1>
+      <h1>POKEDEX API TRAINING</h1>
       <Pokemons />
     </div>
   );

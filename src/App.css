@@ -41,3 +41,25 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.pokemonimg {
+  height: 60px;
+  width: auto;
+}
+
+.pokemonCard {
+  border: 1px solid black;
+  width: 150px;
+  color:white;
+  font-family: 'Courier New';
+  font-weight: 700;
+}
+
+body {
+  background-color: #243447;
+
+}
+
+h1 {
+  color:white
+}
