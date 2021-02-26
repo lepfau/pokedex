@@ -44,8 +44,31 @@
 
 .pokemonimg {
   height: 60px;
-  width: auto;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 15px;
+  border: 3px solid green
 }
+
+.pokemonimgfire {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 15px;
+  border: 3px solid red
+}
+
+.pokemonimgwater {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 15px;
+  border: 3px solid blue
+}
+
 
 .pokemonCard {
   border: 1px solid black;
