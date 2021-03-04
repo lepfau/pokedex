@@ -51,54 +51,9 @@
   border: 3px solid green
 }
 
-.pokemonimgfire {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 15px;
-  border: 3px solid red
-}
-
-.pokemonimgbug {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 15px;
-  border: 3px solid lightgreen
-}
-.pokemonimgnormal {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 15px;
-  border: 3px solid burlywood
-}
-
-.pokemonimgpoison {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 15px;
-  border: 3px solid purple
-}
-
-
-.pokemonimgwater {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 15px;
-  border: 3px solid blue
-}
-
 
 .pokemonCard {
-  border: 1px solid black;
+  border: 1px solid ;
   width: 150px;
   color:white;
   font-family: 'Courier New';
@@ -107,7 +62,7 @@
 
 body {
   background-color: #243447;
-
+margin: 30px;
 }
 
 h1 {

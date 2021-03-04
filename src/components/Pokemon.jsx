@@ -17,6 +17,8 @@ export class Pokemon extends Component {
     else return "white";
   }
 
+  
+
   componentDidMount() {
     axios.get(this.props.url).then((responseFromApi) => {
       // console.log(responseFromApi.data.sprites.version['generation-v']['black-white'].animated.back_default);
@@ -32,7 +34,7 @@ export class Pokemon extends Component {
 
   render() {
     return (
-      <div className="pokemonCard">
+      <div className="pokemonCard" >
         <p>{this.props.name.toUpperCase()}</p>
 
         <img
@@ -43,6 +45,7 @@ export class Pokemon extends Component {
             borderRadius: "50%",
             padding: "15px",
             backgroundColor: "whitesmoke",
+           
           }}
           alt="pokemonimg"
           src={this.state.sprites}
