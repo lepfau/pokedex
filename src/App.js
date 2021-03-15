@@ -4,11 +4,12 @@ import axios from "axios";
 export default function App() {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [count, setCount] = useState(10);
 
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0/")
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0/`)
       .then((res) => {
         return res.data.results;
       })
@@ -21,9 +22,13 @@ export default function App() {
       });
   }, []);
 
+  function handleClick() {
+    setCount(count + 10);
+  }
+
   return (
     <div className="App">
-      <h1>Example</h1>
+      <h1>POKEDEX</h1>
       <div className="pokemons">
         {loading ? (
           <img
@@ -31,9 +36,9 @@ export default function App() {
             src="https://i.pinimg.com/originals/4e/a2/3e/4ea23e6339937b95a8aa5cd08eeb3266.gif"
           />
         ) : (
-          pokemon.map((p) => (
+          pokemon.slice(0, count).map((p) => (
             <div key={p.id} className="pokemon-card">
-              <p>{p.name}</p>
+              <p>{p.name[0].toUpperCase() + p.name.substring(1)}</p>
               <img
                 alt="pokemonimg"
                 className="pokemon-image"
@@ -45,6 +50,7 @@ export default function App() {
             </div>
           ))
         )}
+        <button onClick={() => handleClick()}>Load more...</button>
       </div>
     </div>
   );
